@@ -1,0 +1,4 @@
+FROM bkjeholt/base-mysql-mydumper:latest-rpi
+
+MAINTAINER Björn Kjeholt <dev@kjeholt.se>
+
