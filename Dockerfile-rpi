@@ -1,4 +1,4 @@
-FROM bkjeholt/base-mydumper:latest-rpi
+FROM bkjeholt/base-mydumper:dev-rpi
 
 MAINTAINER Björn Kjeholt <dev@kjeholt.se>
 
