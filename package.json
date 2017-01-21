@@ -1,0 +1,21 @@
+{
+    "name": "mysql-backup-dropbox",
+    "description": "",
+    "version": "0.0.1",
+    "main": "./mysql-backup-dropbox.js",
+    "author": {
+        "name": "Björn Kjeholt",
+        "email": "dev@kjeholt.se"
+    },
+    "keywords": [],
+    "licenses": {
+        "type": "none"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/bkjeholt/mysql-backup-dropbox.git"
+    },
+    "bugs": {
+        "url": "http://github.com/bkjeholt/mysql-backup-dropbox/issues"
+    }
+}
