@@ -1,40 +1,11 @@
-FROM debian:jessie
+FROM bkjeholt/base-mydumper:dev-x86
 
-MAINTAINER Björn Kjeholt based on a file designed by confirm IT solutions, dbarton
+MAINTAINER Björn Kjeholt <dev@kjeholt.se>
 
-#
-# Add user.
-#
+ARG DOCKER_IMAGE_NAME
+ARG DOCKER_IMAGE_TAG
 
-RUN \
-    groupadd -g 666 mybackup && \
-    useradd -u 666 -g 666 -d /backup -c "MySQL Backup User" mybackup
+ENV DOCKER_IMAGE_NAME ${DOCKER_IMAGE_NAME:-UnknownName}
+ENV DOCKER_IMAGE_TAG ${DOCKER_IMAGE_TAG:-UnknownRevision}
 
-#
-# Install required packages.
-#
-
-RUN \
-    apt-get -y update && \
-    apt-get -y install mydumper && \
-    rm -rf /var/lib/apt/lists/*
-
-#
-# Install start script.
-#
-
-COPY init.sh /init.sh
-RUN chmod 750 /init.sh
-
-#
-# Set container settings.
-#
-
-VOLUME ["/backup"]
-WORKDIR /backup
-
-#
-# Start process.
-#
-
-CMD ["/init.sh"]
+RUN chmod -f 755 /usr/local/bin/dropbox-uploader/* 
