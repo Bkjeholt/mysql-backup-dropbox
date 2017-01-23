@@ -27,7 +27,7 @@ docker run -d \
            --restart=always \
            --name $DOCKER_CONTAINER_NAME \
            --link mysql-db-hic:mysql \
-           --env DROPBOX_API_KEY="QkanZHtSteMAAAAAAAAAGptkhlvELB4qXt5qHD_Xe8yEdz2ViFSGRGo0799MbBh4" \
+           --env DROPBOX_API_KEY="Dropbox-api-key" \
            --env DROPBOX_PATH="Backups/mysql/backup1" \
            --env MYSQL_BACKUP_INTERVALL="12" \
            --env DOCKER_CONTAINER_NAME=${DOCKER_CONTAINER_NAME} \
